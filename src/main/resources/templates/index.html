@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Welcome to the trace generator landing page</title>
+  </head>
+  <body>
+  <table align="center">
+    <th>Use the textarea below to define the trace tree</th>
+    <tr><td>&nbsp;</td></tr>
+    <tr>
+      <td>
+        <textarea rows="10" cols="100" name="traceConf" form="traceForm">
+1,2,3,4
+2,3
+3,4,5,7,9
+7,8,9,12
+11
+12
+        </textarea>
+        <form action="/generateTrace" id="traceForm" method="post">
+          <input type="submit">
+        </form>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
