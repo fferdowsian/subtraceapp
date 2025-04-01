@@ -68,12 +68,14 @@ public class SubtraceappApplication {
 
   @GetMapping("/one")
   public String one() {
+    two();
     logger.debug("Endpoint one invoked");
     return "one";
   }
 
   @GetMapping("/two")
   public String two() {
+    three();
     logger.debug("Endpoint two invoked");
     return "two";
   }
