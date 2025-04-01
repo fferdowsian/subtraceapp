@@ -68,7 +68,16 @@ public class SubtraceappApplication {
 
   @GetMapping("/one")
   public String one() {
-    two();
+    HttpGet httpget = new HttpGet("http://127.0.0.1:8080/two");
+    CloseableHttpClient httpclient = HttpClients.createDefault();
+    logger.debug("calling two from inside one");
+    try {
+      HttpResponse httpresponse = httpclient.execute(httpget);
+      logger.debug("reponse is: " + httpresponse.toString());
+    } catch (IOException e) {
+      logger.debug("IOException: " + e);
+      e.printStackTrace();
+    }
     logger.debug("Endpoint one invoked");
     return "one";
   }
