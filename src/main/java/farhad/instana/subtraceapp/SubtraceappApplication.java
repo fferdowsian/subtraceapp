@@ -1,5 +1,6 @@
 package farhad.instana.subtraceapp;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import farhad.instana.subtraceapp.helpers.BranchProcessor;
+import farhad.instana.subtraceapp.helpers.DynamicMethodCaller;
 import farhad.instana.subtraceapp.helpers.InputParser;
 
 @SpringBootApplication
@@ -20,42 +22,84 @@ public class SubtraceappApplication {
 
   @PostMapping("/generateTrace")
   public String generateTrace(@RequestParam(value = "traceConf", defaultValue = "1") String traceConf) {
+    
     logger.debug("generateTrace invoked");
-    //logger.debug("trace conf is: " + traceConf);
+
+    String[] eachline = InputParser.getLines(traceConf);
+    List<int[]> lineNumbers = new ArrayList<>();
+    for (String line : eachline) {
+      String[] parts = line.split(",");
+      int[] numbers = new int[parts.length];
+      for (int i = 0; i < parts.length; i++) {
+        numbers[i] = Integer.parseInt(parts[i].trim());
+      }
+      System.out.println(numbers.length);
+      lineNumbers.add(numbers);
+    } 
+    for (int i = 0; i < lineNumbers.size(); i++) {
+      int[] elements = lineNumbers.get(i);
+      DynamicMethodCaller.doSomet(elements);
+      //BranchProcessor.processBranch(elements);
+  }
+    System.out.println(lineNumbers);
+
+  return traceConf;
+
+
+ /*
+    int[] oneLineEndpoints = InputParser.
+    List<int[]> result = new ArrayList<>();
+
+
+
+
     List<int[]> numberArrays = InputParser.parseInput(traceConf);
 
+
+
+    
+    return "";
+    
+    
+    /*
     for (int[] array : numberArrays) {
       BranchProcessor.processBranch(array);
     }
     return String.format("traceConf is %s!", traceConf);
+    */
   }
 
   @GetMapping("/one")
-  public String one() {
+  public String one(int[] branch) {
+    BranchProcessor.processBranch(branch);
     logger.debug("Endpoint one invoked");
     return "one";
   }
 
   @GetMapping("/two")
-  public String two() {
+  public String two(int[] branch) {
+    BranchProcessor.processBranch(branch);
     logger.debug("Endpoint two invoked");
     return "two";
   }
 
   @GetMapping("/three")
-  public String three() {
+  public String three(int[] branch) {
+    BranchProcessor.processBranch(branch);
     logger.debug("Endpoint three invoked");
     return "three";
   }
 
   @GetMapping("/four")
-  public String four() {
+  public String four(int[] branch) {
+    BranchProcessor.processBranch(branch);
     logger.debug("Endpoint four invoked");
     return "four";
   }
 
   @GetMapping("/five")
-  public String five() {
+  public String five(int[] branch) {
+    BranchProcessor.processBranch(branch);
     logger.debug("Endpoint five invoked");
     return "five";
   }

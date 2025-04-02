@@ -1,7 +1,6 @@
 package farhad.instana.subtraceapp.helpers;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -12,7 +11,6 @@ import org.slf4j.LoggerFactory;
 
 public class BranchProcessor {
   protected static Logger logger = LoggerFactory.getLogger(BranchProcessor.class);  
-
 
   public static void processBranch(int[] branch) {
     if (branch.length == 0) {
@@ -25,8 +23,6 @@ public class BranchProcessor {
     System.out.println("Processing endpoint: " + endpoint);
 
     // Recursive call with the rest of the array
-    processBranch(Arrays.copyOfRange(branch, 0, branch.length-1));
-
     try {
     endpointStr = EndpointFinder.getEndpoint(endpoint);
     logger.debug(endpoint + " -> " + endpointStr);
@@ -40,9 +36,5 @@ public class BranchProcessor {
       logger.debug("IOException: " + e);
       e.printStackTrace();
     }
-    //Thread.sleep(2000);
-
-
-
   }
 }
