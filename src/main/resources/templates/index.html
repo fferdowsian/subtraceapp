@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Welcome to the trace generator landing page</title>
+    <script>
+      function validateInput(event) {
+        let textarea = document.getElementsByName("traceConf")[0];
+        let input = textarea.value;
+        let regex = /^[0-9,\n\r]+$/; // Allows only numbers, commas, and newlines
+        
+        if (!regex.test(input)) {
+          alert("Invalid input! Only numbers, commas, and newlines are allowed.");
+          event.preventDefault(); // Prevent form submission
+          return false;
+        }
+        return true;
+      }
+    </script>
   </head>
   <body>
-  <table align="center">
-    <th>Use the textarea below to define the trace tree</th>
-    <tr><td>&nbsp;</td></tr>
-    <tr>
-      <td>
-        <textarea rows="10" cols="100" name="traceConf" form="traceForm">
+    <table align="center">
+      <th>Use the textarea below to define the trace tree</th>
+      <tr><td>&nbsp;</td></tr>
+      <tr>
+        <td>
+          <form action="/generateTrace" id="traceForm" method="post" onsubmit="return validateInput(event)">
+            <textarea rows="10" cols="100" name="traceConf" form="traceForm">
 1,2,3,4
 2,3
 3,4,5,7,9
 7,8,9,12
 11
-12
-        </textarea>
-        <form action="/generateTrace" id="traceForm" method="post">
-          <input type="submit">
-        </form>
+12</textarea></br>
+            <input type="submit">
+          </form>
         </td>
       </tr>
     </table>

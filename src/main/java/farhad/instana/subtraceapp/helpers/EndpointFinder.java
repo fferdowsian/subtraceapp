@@ -1,10 +1,14 @@
-package farhad.instana.subtraceapp.other;
+package farhad.instana.subtraceapp.helpers;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class EndpointFinder {
 
+  protected static Logger logger = LoggerFactory.getLogger(EndpointFinder.class);
   private static final Map<Integer, String> numberMap = new HashMap<>();
 
   static {
