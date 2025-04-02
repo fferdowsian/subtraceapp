@@ -70,36 +70,31 @@ public class SubtraceappApplication {
   }
 
   @GetMapping("/one")
-  public String one(int[] branch) {
-    BranchProcessor.processBranch(branch);
+  public String one() {
     logger.debug("Endpoint one invoked");
     return "one";
   }
 
   @GetMapping("/two")
-  public String two(int[] branch) {
-    BranchProcessor.processBranch(branch);
+  public String two() {
     logger.debug("Endpoint two invoked");
     return "two";
   }
 
   @GetMapping("/three")
-  public String three(int[] branch) {
-    BranchProcessor.processBranch(branch);
+  public String three() {
     logger.debug("Endpoint three invoked");
     return "three";
   }
 
   @GetMapping("/four")
-  public String four(int[] branch) {
-    BranchProcessor.processBranch(branch);
+  public String four() {
     logger.debug("Endpoint four invoked");
     return "four";
   }
 
   @GetMapping("/five")
-  public String five(int[] branch) {
-    BranchProcessor.processBranch(branch);
+  public String five() {
     logger.debug("Endpoint five invoked");
     return "five";
   }

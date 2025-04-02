@@ -37,4 +37,24 @@ public class BranchProcessor {
       e.printStackTrace();
     }
   }
+
+  public static void processURL(String endpointStr) {
+    String serverURL = "http://127.0.0.1:8080";
+    
+    try {
+    logger.debug("calling "+endpointStr);
+    HttpGet httpget = new HttpGet(serverURL + "/" + endpointStr);
+    CloseableHttpClient httpclient = HttpClients.createDefault();
+    logger.debug("calling " + httpget.getURI().toString());
+    HttpResponse httpresponse;
+      httpresponse = httpclient.execute(httpget);
+      logger.debug("reponse is: " + httpresponse.toString());
+    } catch (IOException e) {
+      logger.debug("IOException: " + e);
+      e.printStackTrace();
+    }
+  }
+
+
+
 }

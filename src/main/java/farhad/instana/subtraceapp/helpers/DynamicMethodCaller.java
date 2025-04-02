@@ -26,53 +26,66 @@ public class DynamicMethodCaller {
     }
   }
 
+
+
+  
   // Sample methods
   private void one(int[] arr, int nextIndex) {
+    BranchProcessor.processURL(EndpointFinder.getEndpoint(arr[nextIndex-1]));
     System.out.println("one called");
     invokeMethod(arr, nextIndex);
   }
 
   private void two(int[] arr, int nextIndex) {
+    BranchProcessor.processURL(EndpointFinder.getEndpoint(arr[nextIndex-1]));
     System.out.println("two called");
     invokeMethod(arr, nextIndex);
   }
 
   private void three(int[] arr, int nextIndex) {
+    BranchProcessor.processURL(EndpointFinder.getEndpoint(arr[nextIndex-1]));
     System.out.println("three called");
     invokeMethod(arr, nextIndex);
   }
 
   private void four(int[] arr, int nextIndex) {
+    BranchProcessor.processURL(EndpointFinder.getEndpoint(arr[nextIndex-1]));
     System.out.println("four called");
     invokeMethod(arr, nextIndex);
   }
 
   private void five(int[] arr, int nextIndex) {
+    BranchProcessor.processURL(EndpointFinder.getEndpoint(arr[nextIndex-1]));
     System.out.println("five called");
     invokeMethod(arr, nextIndex);
   }
 
   private void six(int[] arr, int nextIndex) {
+    BranchProcessor.processURL(EndpointFinder.getEndpoint(arr[nextIndex-1]));
     System.out.println("six called");
     invokeMethod(arr, nextIndex);
   }
 
   private void seven(int[] arr, int nextIndex) {
+    BranchProcessor.processURL(EndpointFinder.getEndpoint(arr[nextIndex-1]));
     System.out.println("seven called");
     invokeMethod(arr, nextIndex);
   }
 
   private void eight(int[] arr, int nextIndex) {
+    BranchProcessor.processURL(EndpointFinder.getEndpoint(arr[nextIndex-1]));
     System.out.println("eight called");
     invokeMethod(arr, nextIndex);
   }
 
   private void nine(int[] arr, int nextIndex) {
+    BranchProcessor.processURL(EndpointFinder.getEndpoint(arr[nextIndex-1]));
     System.out.println("nine called");
     invokeMethod(arr, nextIndex);
   }
 
   private void ten(int[] arr, int nextIndex) {
+    BranchProcessor.processURL(EndpointFinder.getEndpoint(arr[nextIndex-1]));
     System.out.println("ten called");
     invokeMethod(arr, nextIndex);
   }
