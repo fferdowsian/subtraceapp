@@ -14,7 +14,7 @@ public class EndpointFinder {
   static {
     String[] units = { "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
     String[] teens = { "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
-        "Nineteen" };
+        "nineteen" };
     String[] tens = { "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
 
     for (int i = 1; i <= 100; i++) {                                        
