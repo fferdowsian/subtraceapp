@@ -11,6 +11,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.stereotype.Controller;
 
 import farhad.instana.subtraceapp.helpers.BranchProcessor;
+
 @SpringBootApplication
 @Controller
 public class SubtraceappApplication {

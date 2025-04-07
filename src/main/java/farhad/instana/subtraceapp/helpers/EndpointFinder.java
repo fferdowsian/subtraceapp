@@ -17,7 +17,7 @@ public class EndpointFinder {
         "nineteen" };
     String[] tens = { "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
 
-    for (int i = 1; i <= 100; i++) {                                        
+    for (int i = 1; i <= 100; i++) {
       if (i < 10) {
         numberMap.put(i, units[i]);
       } else if (i < 20) {
@@ -27,7 +27,7 @@ public class EndpointFinder {
         int unitPart = i % 10;
         numberMap.put(i, tens[tenPart] + (unitPart != 0 ? "-" + units[unitPart] : ""));
       } else {
-        numberMap.put(i, "one-hundred");                                  
+        numberMap.put(i, "one-hundred");
       }
     }
   }

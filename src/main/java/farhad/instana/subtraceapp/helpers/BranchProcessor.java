@@ -21,20 +21,19 @@ public class BranchProcessor {
     callEndpoint(endpoints);
   }
 
-
   public static String callEndpoint(String[] endpoints) {
-  logger.debug("endpoints is "+String.join(",", endpoints));
+    logger.debug("endpoints is " + String.join(",", endpoints));
 
-  logger.debug("endpoints length is "+endpoints.length);
-  
-  if (endpoints[0].length()==0) {
+    logger.debug("endpoints length is " + endpoints.length);
+
+    if (endpoints[0].length() == 0) {
       return ""; // Base case: Stop if the endpointList is empty
     }
     String nextEndpoint = EndpointFinder.getEndpoint(Integer.parseInt(endpoints[0]));
     String remainingEndpoints = String.join(",", Arrays.copyOfRange(endpoints, 1, endpoints.length));
     try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
-      String url = serverURL+"/"+nextEndpoint+"?endpoints="+remainingEndpoints;
-      logger.debug("url is "+url);
+      String url = serverURL + "/" + nextEndpoint + "?endpoints=" + remainingEndpoints;
+      logger.debug("url is " + url);
       HttpGet request = new HttpGet(url);
 
       HttpClientResponseHandler<String> responseHandler = (ClassicHttpResponse response) -> {

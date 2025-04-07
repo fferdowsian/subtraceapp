@@ -14,7 +14,7 @@ public class DummyEndpoints {
   @GetMapping("/one")
   public String one(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint one invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "one";
   }
@@ -22,7 +22,7 @@ public class DummyEndpoints {
   @GetMapping("/two")
   public String two(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint two invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "two";
   }
@@ -30,7 +30,7 @@ public class DummyEndpoints {
   @GetMapping("/three")
   public String three(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint three invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "three";
   }
@@ -38,7 +38,7 @@ public class DummyEndpoints {
   @GetMapping("/four")
   public String four(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint four invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "four";
   }
@@ -46,7 +46,7 @@ public class DummyEndpoints {
   @GetMapping("/five")
   public String five(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint five invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "five";
   }
@@ -54,7 +54,7 @@ public class DummyEndpoints {
   @GetMapping("/six")
   public String six(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint six invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "six";
   }
@@ -62,7 +62,7 @@ public class DummyEndpoints {
   @GetMapping("/seven")
   public String seven(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint seven invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "seven";
   }
@@ -70,7 +70,7 @@ public class DummyEndpoints {
   @GetMapping("/eight")
   public String eight(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint eight invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "eight";
   }
@@ -78,7 +78,7 @@ public class DummyEndpoints {
   @GetMapping("/nine")
   public String nine(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint nine invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "nine";
   }
@@ -86,7 +86,7 @@ public class DummyEndpoints {
   @GetMapping("/ten")
   public String ten(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint ten invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "ten";
   }
@@ -94,7 +94,7 @@ public class DummyEndpoints {
   @GetMapping("/eleven")
   public String eleven(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint eleven invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "eleven";
   }
@@ -102,7 +102,7 @@ public class DummyEndpoints {
   @GetMapping("/twelve")
   public String twelve(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint twelve invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "twelve";
   }
@@ -110,7 +110,7 @@ public class DummyEndpoints {
   @GetMapping("/thirteen")
   public String thirteen(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint thirteen invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "thirteen";
   }
@@ -118,7 +118,7 @@ public class DummyEndpoints {
   @GetMapping("/fourteen")
   public String fourteen(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint fourteen invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "fourteen";
   }
@@ -126,7 +126,7 @@ public class DummyEndpoints {
   @GetMapping("/fifteen")
   public String fifteen(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint fifteen invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "fifteen";
   }
@@ -134,7 +134,7 @@ public class DummyEndpoints {
   @GetMapping("/sixteen")
   public String sixteen(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint sixteen invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "sixteen";
   }
@@ -142,7 +142,7 @@ public class DummyEndpoints {
   @GetMapping("/seventeen")
   public String seventeen(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint seventeen invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "seventeen";
   }
@@ -150,7 +150,7 @@ public class DummyEndpoints {
   @GetMapping("/eighteen")
   public String eighteen(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint eighteen invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "eighteen";
   }
@@ -158,7 +158,7 @@ public class DummyEndpoints {
   @GetMapping("/nineteen")
   public String nineteen(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint nineteen invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "nineteen";
   }
@@ -166,7 +166,7 @@ public class DummyEndpoints {
   @GetMapping("/twenty")
   public String twenty(@RequestParam(value = "endpoints", defaultValue = "") String endpoints) {
     logger.debug("Endpoint twenty invoked");
-    logger.debug("endpoints is "+endpoints);
+    logger.debug("endpoints is " + endpoints);
     BranchProcessor.callEndpoint(endpoints.split(","));
     return "twenty";
   }
